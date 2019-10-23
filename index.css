@@ -53,8 +53,6 @@ body {
     width: 100%;
     height: 40px;
     background: rgb(233, 233, 238);
-    position: sticky;
-    top: 0;
 }
 
 #top_menu li {
@@ -101,6 +99,14 @@ article footer {
     padding: 30px;
     background: #66CCCC;
     float: left;
+}
+
+#side_hot_news li {
+    list-style: none;
+}
+
+#side_hot_news li a {
+    text-decoration: none;
 }
 
 #the_footer {
