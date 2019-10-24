@@ -26,7 +26,7 @@ body {
     background: yellow;
 }
 
-#logo {
+#top_header #logo {
     display: block;
     width: 20%;
     float: left;
