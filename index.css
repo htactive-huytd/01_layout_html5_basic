@@ -29,8 +29,9 @@ body {
 #top_header #logo {
     display: block;
     width: 20%;
+    text-align: center;
+    margin-top: 15px;
     float: left;
-    padding: 1% 5%;
 }
 
 #logo img {
@@ -47,6 +48,7 @@ body {
 #content_header h1 {
     margin: 2% 5%;
     color: red;
+    text-align: center;
 }
 
 /* begin slideshow */
@@ -69,9 +71,8 @@ body {
     display: none;
 }
 
-.mySlides img{
+.mySlides img {
     height: 400px;
-
 }
 
 /* Next & previous buttons */
@@ -174,8 +175,14 @@ body {
 
 #top_menu {
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
     background: rgb(233, 233, 238);
+    position: sticky;
+    top: 0;
+}
+
+#top_menu ul {
+    text-align: center;
 }
 
 #top_menu li {
