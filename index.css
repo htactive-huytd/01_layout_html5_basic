@@ -58,7 +58,7 @@ body {
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     position: relative;
     margin: auto;
 }
@@ -67,6 +67,11 @@ body {
 
 .mySlides {
     display: none;
+}
+
+.mySlides img{
+    height: 400px;
+
 }
 
 /* Next & previous buttons */
