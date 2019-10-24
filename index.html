@@ -7,18 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Layout HTML5 basic</title>
     <link href="https://htactive.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
     <link rel="stylesheet" href="index.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 
 <body>
     <div id="contain">
+        <div class='lentop'>
+            <div>
+                <img
+                    src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png' />
+            </div>
+        </div>
         <header id="top_header">
             <div id="logo">
                 <img src="https://htactive.com/assets/voc/images/logo_red.png" alt="logo">
             </div>
             <div id="content_header">
-                <h1>TRUNG TÂM TIN TỨC HTACTIVE</h1>
+                <h1>TRUNG TÂM HTACTIVE</h1>
             </div>
 
         </header>
@@ -177,7 +184,8 @@
             </section>
 
             <aside id="side_hot_news">
-                <h3>Tin tức hot</h3>
+                <h3>Tin tức hot !!!</h3>
+                <br>
                 <ul>
                     <li><a href="#">Nhiều xác lợn nghi bị dịch tả châu Phi vứt ở cạnh sông</a></li>
                     <li><a href="#">Trận El Clasico đá bù vào ngày 18/12</a></li>
@@ -258,6 +266,15 @@
             setTimeout(showAutoSlides, 5000); // Change image every 2 seconds
         }
 
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+                else $(".lentop").fadeOut();
+            });
+            $(".lentop").click(function () {
+                $("body,html").animate({ scrollTop: 0 }, "slow");
+            });
+        });
     </script>
 
 </body>

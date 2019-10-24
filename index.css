@@ -18,12 +18,36 @@ header, section, footer, aside, nav, article, hgruop {
 body {
     margin: 0px;
     padding: 0px;
+    background: #DCD8CF;
+}
+
+.lentop {
+    display: none;
+    bottom: 40%;
+    right: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+}
+
+.lentop div {
+    background: crimson;
+    border: 2px solid #fff;
+    border-radius: 45px;
+    padding: 11px 12.5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)
+}
+
+.lentop img {
+    width: 16px;
+    height: 16px;
 }
 
 #top_header {
     width: 100%;
     height: 90px;
-    background: yellow;
+    background: #DCD8CF;
+    /* background: black; */
 }
 
 #top_header #logo {
@@ -47,7 +71,7 @@ body {
 
 #content_header h1 {
     margin: 2% 5%;
-    color: red;
+    color: #e84c3d;
     text-align: center;
 }
 
@@ -176,7 +200,8 @@ body {
 #top_menu {
     width: 100%;
     /* height: 40px; */
-    background: rgb(233, 233, 238);
+    /* background: rgb(233, 233, 238); */
+    background: #DCD8CF;
     position: sticky;
     top: 0;
 }
@@ -199,6 +224,7 @@ body {
 
 #main {
     display: block;
+    margin-left: 15px;
 }
 
 #main_section {
@@ -223,16 +249,17 @@ article footer {
 
 #side_hot_news {
     display: block;
-    width: 22%;
+    width: 25%;
     border: 1px solid red;
     margin: 20px 0px;
     padding: 30px;
     background: #66CCCC;
     float: left;
+    color: red;
 }
 
 #side_hot_news li {
-    list-style: none;
+    /* list-style: none; */
 }
 
 #side_hot_news li a {
