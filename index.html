@@ -53,8 +53,8 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="buttonSlides(-1)">&#10094;</a>
+            <a class="next" onclick="buttonSlides(1)">&#10095;</a>
         </div>
         <!-- <br> -->
 
@@ -221,19 +221,36 @@
 
     <script>
         var slideIndex = 1;
-        showSlides(slideIndex);
-        showAutoSlides();
 
+        showSlides();
+        var id = setTimeout(() => {
+            plusSlides(1);
+            id;
+        }, 3000);
+        // var id = window.setTimeout(function () { plusSlides(1);}, 2000);
+        // var myVar1 = setTimeout(function () { plusSlides(1); }, 3000);
         // Next/previous controls
         function plusSlides(n) {
+            
             showSlides(slideIndex += n);
-            // showAutoSlides();
+            // while (id--) {
+            //     window.clearTimeout(id); // will do nothing if no timeout with id is present
+            // }
+            // var id = window.setTimeout(function () { plusSlides(1); }, 2000);
+            // clearTimeout(myVar1);
+            // var myVar1 = setTimeout(function () { plusSlides(1); }, 3000);
+        }
+        function buttonSlides(n) {
+            showSlides(slideIndex += n);
+            // clearInterval(id);
+            // var id = setInterval(() => {
+            //     plusSlides(1);
+            // }, 3000);
         }
 
         // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
-            // showAutoSlides();
         }
 
         function showSlides(n) {
@@ -250,21 +267,9 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
+
         }
 
-        // showAutoSlides();
-
-        function showAutoSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showAutoSlides, 5000); // Change image every 2 seconds
-        }
 
         $(function () {
             $(window).scroll(function () {
